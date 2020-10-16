@@ -1,0 +1,44 @@
+{{>footer}}
+<body>
+    <main>
+<div class="container mt-5">
+   
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td>Nombre</td>
+            <td>Marca</td>
+            <td>Modelo</td>
+            <td>Stock</td>
+             <td>Accion</td>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each producto}}
+              <tr>
+                <td>{{nombre}}</td>
+                <td>{{marca}}</td>
+                <td>{{modelo}}</td>
+                <td>{{stock}}</td>
+                <td>
+                <a href="/GowPlay/delete/{{id}}" class="btn btn-danger d-block">Eliminar </a>
+                                            <br>
+                <a href="/GowPlay/edit/{{id}}" class="btn btn-info d-block">Editar </a>
+                </td>
+              </tr>
+            
+        </tbody>
+          {{else}}
+
+                                <div class=" text-center">
+                                    <h3> Aun no publicas ningun producto</h3>
+                                </div>
+                            
+             {{/each}}
+      </table>
+      
+  
+  </div>
+</div>
+    </main>
+</body>
